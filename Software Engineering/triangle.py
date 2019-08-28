@@ -16,16 +16,19 @@ def triangle():
     P = math.pi
     A = math.acos((b**2 + c**2 - a**2)/(2 * b * c))
     B = math.acos((a**2 + c**2 - b**2)/(2 * a * c))
+    C = math.acos((a**2 + b**2 - c**2)/(2 * a * b))
+    '''
     if(A < 0):
         A += P
     if(B < 0):
         B += P
-    C = P - A - B
+    '''
+    #C = P - A - B
 
-    A = round(A,3)
-    B = round(B,3)
-    C = round(C,3)
-    P = round(P,3)
+    A = round(A,6)
+    B = round(B,6)
+    C = round(C,6)
+    P = round(P,6)
 
     if(A == P/2 or B == P/2 or C == P/2):
         text += 'right angled '
