@@ -8,3 +8,4 @@ y = [i**2 for i in range(10)]
 plt.hist(x,y)
 plt.bar(x,y)
 plt.scatter(x,y)
+#I edited using Windows
