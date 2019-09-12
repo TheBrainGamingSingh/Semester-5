@@ -9,3 +9,4 @@ plt.hist(x,y)
 plt.bar(x,y)
 plt.scatter(x,y)
 #I edited using Windows
+#I edited using Ubuntu 19.04
