@@ -5,7 +5,7 @@ def triangle():
     b = float(input('Enter length of side b : '))
     c = float(input('Enter length of side c : '))
 
-    if((a <= 0) or (b <= 0) or (c <= 0) or (a + b <= c) or (a + c <= b) or (c + b <= a) ):
+        if((a <= 0) or (b <= 0) or (c <= 0) or (a + b <= c) or (a + c <= b) or (c + b <= a) ):
         print('Triangle can not be formed, check your inputs.')
         p = str(input('Do you want to test again? [Y/N] : '))
         if(p == 'y' or p == 'Y'):
