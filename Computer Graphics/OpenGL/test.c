@@ -50,7 +50,7 @@ void Init()
   /* glLoadIdentity(); */
   gluOrtho2D(0 , 640 , 0 , 480);
 }
-int main(int argc, char **argv)
+void main(int argc, char **argv)
 {
   printf("Enter two end points of the line to be drawn:\n");
   printf("\n************************************");
