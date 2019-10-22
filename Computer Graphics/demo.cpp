@@ -27,9 +27,17 @@ void bound_it(int x, int y, float* fillColor, float* bc){
         glEnd();
         glFlush();
         bound_it(x+1,y,fillColor,bc);
+        bound_it(x,y+1,fillColor,bc);
+
+        bound_it(x+1,y+1,fillColor,bc);
+        bound_it(x-2,y-2,fillColor,bc);
+
+        bound_it(x+1,y-2,fillColor,bc);
+        bound_it(x-2,y+1,fillColor,bc);
+
         bound_it(x-2,y,fillColor,bc);
-        bound_it(x,y+2,fillColor,bc);
         bound_it(x,y-2,fillColor,bc);
+
     }
 }
 
@@ -65,7 +73,7 @@ int main(int argc, char** argv){
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowSize(640,480);
     glutInitWindowPosition(200,200);
-    glutCreateWindow("Many Amaze Very GL WOW");
+    glutCreateWindow("Graphics");
     glutDisplayFunc(world);
     glutMouseFunc(mouse);
     init();
