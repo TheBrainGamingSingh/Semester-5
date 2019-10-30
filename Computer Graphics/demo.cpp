@@ -61,9 +61,11 @@ void world(){
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(1,0,0);
     glBegin(GL_LINE_LOOP);
-        glVertex2i(150,100);
-        glVertex2i(300,300);
-        glVertex2i(450,100);
+        glVertex2i(100,100);
+        glVertex2i(400,400);
+        glVertex2i(600,100);
+
+
     glEnd();
     glFlush();
 }
