@@ -47,7 +47,7 @@ public class market
 
         int arr[] = new int[4];
         int capacity = 5;
-        String str[] = {"Apple","Orange","Watermelon","Bananas"};
+        String str[] = {"Apple","Orange","Watermelon","Banana"};
 
         public void produce() throws InterruptedException
         {
@@ -60,20 +60,23 @@ public class market
                 {
                     i = rand.nextInt(4);
 
+                    //while (arr[i] == capacity)
+                      //i = rand.nextInt(4);
+                    System.out.println("Producer yields-" + str[i]);
                     while (arr[i] == capacity)
                       wait();
 
                     arr[i]++;
                     System.out.println("--------------------------------------------");
-
-                    System.out.println("Producer produced - " + str[i]);
-                    System.out.println("--------------------------------------------");
-
                     for(int k = 0; k < 4;k++)
                     {
                       System.out.println(str[k] + "s" + "--" + arr[k]);
                     }
                     System.out.println("--------------------------------------------");
+                    System.out.println("Producer produced - " + str[i]);
+                    System.out.println("--------------------------------------------");
+
+
 
                     notify();
                     Thread.sleep(1000);
@@ -91,11 +94,21 @@ public class market
                 {
                     j = ran.nextInt(4);
 
-                    while (arr[j] == 0)
-                      wait();
+                    //while (arr[j] == 0)
+                      //j = ran.nextInt(4);
+                    System.out.println("Consumer requests-" + str[j]);
 
+                    while (arr[j] == 0)
+                        wait();
                     arr[j]--;
+                    
                     System.out.println("--------------------------------------------");
+                    for(int k = 0; k < 4;k++)
+                    {
+                      System.out.println(str[k] + "s" + "--" + arr[k]);
+                    }
+                    System.out.println("--------------------------------------------");
+
                     System.out.println("Consumer consumed-" + str[j]);
                     System.out.println("--------------------------------------------");
                     for(int k = 0; k < 4;k++)
