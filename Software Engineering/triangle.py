@@ -1,5 +1,6 @@
 import math
 def triangle():
+    print()
     #print()
     a = float(input('Enter length of side a : '))
     b = float(input('Enter length of side b : '))
