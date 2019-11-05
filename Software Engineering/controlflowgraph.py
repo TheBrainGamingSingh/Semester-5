@@ -33,8 +33,12 @@ if __name__ == '__main__':
     frame = tk.Frame(root, bg = background)
     frame.pack(side ="bottom", fill ="both", expand = "yes")
 
-    tk.Label(frame, text ="Nodes\t\t"+str(nodes), bg = background).pack()
-    tk.Label(frame, text ="Edges\t\t"+str(edges), bg = background).pack()
-    tk.Label(frame, text ="Cyclomatic Complexity\t" + str(complexity), bg = background).pack()
+    #tk.Label(frame, text ="Nodes\t\t"+str(nodes), bg = background).pack()
+    #tk.Label(frame, text ="Edges\t\t"+str(edges), bg = background).pack()
+    #tk.Label(frame, text ="Cyclomatic Complexity\t" + str(complexity), bg = background).pack()
     tk.Label(frame, text ="Manpreet Singh Juneja\t SID : 17103022" , bg = background).pack()
+    print("Nodes\t\t"+str(nodes))
+    print("Edges\t\t"+str(edges))
+    print("Cyclomatic Complexity\t" + str(complexity))
+
     root.mainloop()
