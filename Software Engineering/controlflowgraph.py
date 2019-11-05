@@ -15,6 +15,7 @@ if __name__ == '__main__':
     g = CFGNode.to_graph(arcs)
     g.draw(args.pythonfile + '.png', prog ='dot')
 
+
     root = tk.Tk()
     root.title("Control Flow Graph")
     img1 = Image.open(str(args.pythonfile) + ".png")
@@ -34,5 +35,6 @@ if __name__ == '__main__':
 
     tk.Label(frame, text ="Nodes\t\t"+str(nodes), bg = background).pack()
     tk.Label(frame, text ="Edges\t\t"+str(edges), bg = background).pack()
-    tk.Label(frame, text ="Cyclo Complexity\t" + str(complexity), bg = background).pack()
+    tk.Label(frame, text ="Cyclomatic Complexity\t" + str(complexity), bg = background).pack()
+    tk.Label(frame, text ="Manpreet Singh Juneja\t SID : 17103022" , bg = background).pack()
     root.mainloop()
