@@ -1,0 +1,20 @@
+digraph "clustertest.py" {
+	graph [label="test.py"]
+	1 [label="i = 10
+"]
+	2 [label="while i < 18:
+"]
+	3 [label="i = i + 2
+"]
+	3 -> 2 [label=""]
+	2 -> 3 [label="i < 18
+"]
+	4 [label="print(i)
+"]
+	"4_calls" [label=print
+ shape=box]
+	4 -> "4_calls" [label=calls style=dashed]
+	2 -> 4 [label="(i >= 18)
+"]
+	1 -> 2 [label=""]
+}
